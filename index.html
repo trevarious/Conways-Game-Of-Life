@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+    <title>Conway's Game of Life</title>
+</head>
+<body>
+    <header>
+        <h1>Conway's Game Of Life</h1>
+        <button id="darkModeButton"><img id="dark-mode-icon" src="dark-mode.png" alt=""></button>
+    </header>
+
+    <section id="rules">
+            <h2>Rules Of The Game</h2>
+            <p>Any live cell with fewer than two live neighbors dies, as if by underpopulation, 
+                any live cell with two or three live neighbors lives on to the next generation, 
+                and any live cell with more than three live neighbors dies, as if by overpopulation, 
+                while any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction</p>
+    </section>
+
+    <section id="game">
+        <h1>Conway's Game Of Life</h1>
+        <div class="grid" id="grid"></div>
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+        <button id="resetButton">Reset</button>
+        <div class="slider-container">
+            <label for="speedSlider">Speed:</label>
+            <input type="range" id="speedSlider" min="1" max="50" value="25">
+        </div>
+        <div class="config-dropdown">
+            <label for="configSelector">Select Configuration:</label>
+            <select id="configSelector">
+                <option value="glider">Glider</option>
+                <option value="spaceship">Spaceship</option>
+                <!-- Add more configuration options here -->
+            </select>
+            <button id="placeConfigButton">Place Configuration</button>
+        </div>
+        <div class="color-options">
+            <label for="aliveColorPicker">Alive Cell Color:</label>
+            <input type="color" id="aliveColorPicker" value="#66cc66">
+        
+            <label for="nextToDieColorPicker">Next to Die Cell Color:</label>
+            <input type="color" id="nextToDieColorPicker" value="#ffcccc">
+        </div>
+        <div class="show-dead-cells">
+            <input type="checkbox" id="showDeadCells" checked>
+            <label for="showDeadCells">Show Dead Cells</label>
+        </div>
+        
+        
+        
+        
+        
+    </section>
+
+    <section id="evolution">
+        <h2>The Game</h2>
+        <p>Conway's Game of Life is a cellular automaton devised by mathematician John Conway in 1970. 
+            It is a zero-player game...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Trevor Sykes. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

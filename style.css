@@ -1,0 +1,157 @@
+/* Reset default margins and padding */
+body, h1, h2, h3, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+section {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for sections */
+}
+#dark-mode-icon{
+    background-color: white;
+    border-radius: 50%;
+    width: calc(51px - 1vh);
+    height: calc(51px - 1vh);
+}
+#dark-mode-icon button{
+    background-color: white;
+    border-radius: 50%;
+    width: calc(51px - 1vh);
+    height: calc(51px - 1vh);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+#startButton:hover{
+    background-color: green;
+}
+#stopButton:hover{
+    background-color: red;
+}
+#resetButton:hover{
+    background-color: blue;
+}
+#placeConfigButton:hover{
+    background-color: rgb(110, 0, 114);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(30, 20px);
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #f7f7f7; /* Light gray background for the grid */
+    border-radius: 10px; /* Rounded corners for the grid */
+    overflow: hidden; /* Hide overflow to keep rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for the grid */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+
+.show-dead-cells {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.show-dead-cells label {
+    margin-left: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.922);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+
+    .grid {
+        max-width: 100%;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #222;
+    color: #ccc; /* Light text color */
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+nav a.dark-mode {
+    color: #ccc;
+}
+
+section.dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: #ccc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.grid.dark-mode {
+    background-color: #222; /* Dark gray background for the grid container */
+    border: 1px solid #444; /* Darker border for the grid container */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.cell.dark-mode {
+    background-color: #555; /* Dark gray cells */
+    border: 1px solid #444; /* Darker border for cells */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow for cells */
+    transition: background-color 0.2s ease;
+}
+
+button.dark-mode {
+    background-color: #333;
+    color: #ccc;
+}
+
+footer.dark-mode {
+    background-color: #333;
+    color: #ccc;
+}
