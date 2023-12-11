@@ -5,6 +5,7 @@ const darkModeButton = document.getElementById('darkModeButton');
 const body = document.body;
 const section = document.querySelectorAll('section');
 
+// Define the grid
 const numRows = 30;
 const numCols = 30;
 const cellSize =20;
@@ -16,7 +17,7 @@ darkModeButton.addEventListener('click', () => {
   })
 });
 
-
+// Initialize the grid
 let grid = new Array(numRows).fill(null).map(() => new Array(numCols).fill(false));
 let simulatedSpeed = speedSlider.value;
 let lastUpdateTime = performance.now();
@@ -28,7 +29,7 @@ speedSlider.addEventListener('input', function () {
 simulatedSpeed = speedSlider.value;
 })
 
-
+// Create the grids
 function createGrid() {
   const gridContainer = document.getElementById('grid');
   
